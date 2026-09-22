@@ -1,0 +1,17 @@
+{
+  "name": "honeychain-blockchain",
+  "version": "1.0.0",
+  "description": "HoneyChain smart contracts (Hardhat + Solidity)",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:amoy": "hardhat run scripts/deploy.js --network amoy"
+  },
+  "devDependencies": {
+    "hardhat": "^2.22.6",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5"
+  }
+}

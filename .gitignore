@@ -1,0 +1,13 @@
+node_modules/
+.env
+dist/
+build/
+__pycache__/
+*.pyc
+.venv/
+venv/
+ai-service/app/models/*.joblib
+blockchain/cache/
+blockchain/artifacts/
+*.log
+.DS_Store
