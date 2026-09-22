@@ -8,7 +8,7 @@
     "dev": "nodemon src/server.js",
     "seed": "node ../database/seed/seed.js",
     "demo:reset": "node scripts/reset-demo.js"
-  },
+},
   "dependencies": {
     "express": "^4.19.2",
     "pg": "^8.12.0",
