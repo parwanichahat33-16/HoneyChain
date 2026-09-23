@@ -87,9 +87,21 @@ export default function VirtualKeyboard() {
       <button
         onClick={() => setOpen((o) => !o)}
         title="Toggle on-screen keyboard"
-        className="fixed bottom-4 right-4 z-40 bg-honey-500 text-white rounded-full w-12 h-12 shadow-lg text-xl flex items-center justify-center"
+        className="fixed bottom-4 right-4 z-40 bg-honey-500 hover:bg-honey-600 text-white rounded-full shadow-lg flex items-center gap-2 px-4 py-3"
       >
-        ⌨️
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="5" width="20" height="14" rx="2" stroke="white" strokeWidth="2"/>
+          <circle cx="6" cy="9" r="0.8" fill="white"/>
+          <circle cx="9.5" cy="9" r="0.8" fill="white"/>
+          <circle cx="13" cy="9" r="0.8" fill="white"/>
+          <circle cx="16.5" cy="9" r="0.8" fill="white"/>
+          <circle cx="6" cy="12.5" r="0.8" fill="white"/>
+          <circle cx="9.5" cy="12.5" r="0.8" fill="white"/>
+          <circle cx="13" cy="12.5" r="0.8" fill="white"/>
+          <circle cx="16.5" cy="12.5" r="0.8" fill="white"/>
+          <rect x="6" y="15" width="12" height="1.6" rx="0.8" fill="white"/>
+        </svg>
+        <span className="text-sm font-semibold">Type</span>
       </button>
 
       {open && (
