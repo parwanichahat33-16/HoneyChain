@@ -18,6 +18,7 @@ import Alerts from './pages/Alerts';
 import About from './pages/About';
 import AuditLog from './pages/AuditLog';
 import HiveCompare from './pages/HiveCompare';
+import VirtualKeyboard from './components/VirtualKeyboard';
 
 function ProtectedRoute({ user, role, children }) {
   if (!user) return <Navigate to="/login" replace />;
@@ -28,7 +29,8 @@ function ProtectedRoute({ user, role, children }) {
 export default function App() {
   const auth = useAuth();
 
-  return (
+    return (
+    <>
     <Routes>
       {/* Public */}
       <Route path="/" element={<Landing user={auth.user} />} />
@@ -138,7 +140,9 @@ export default function App() {
         }
       />
 
-      <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
+    <VirtualKeyboard />
+    </>
   );
 }
