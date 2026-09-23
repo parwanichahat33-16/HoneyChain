@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useLanguage } from '../hooks/useLanguage.jsx';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import DarkModeToggle from '../components/DarkModeToggle';
+import InstallButton from '../components/InstallButton';
 
 export default function Landing({ user }) {
   const { t } = useLanguage();
@@ -45,9 +46,10 @@ export default function Landing({ user }) {
           <Link to="/verify/demo" className="px-6 py-3 rounded-xl bg-honey-900 text-white font-semibold shadow-lg text-sm sm:text-base">
             {t.verifyHoney}
           </Link>
-          <Link to="/login" className="px-6 py-3 rounded-xl border-2 border-honey-500 text-honey-900 dark:text-honey-100 font-semibold text-sm sm:text-base">
+                    <Link to="/login" className="px-6 py-3 rounded-xl border-2 border-honey-500 text-honey-900 dark:text-honey-100 font-semibold text-sm sm:text-base">
             {t.beekeeperLogin}
           </Link>
+          <InstallButton />
         </div>
 
         <form onSubmit={handleLookup} className="mt-8 max-w-sm mx-auto flex flex-col sm:flex-row gap-2">
