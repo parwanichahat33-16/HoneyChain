@@ -10,7 +10,11 @@ const { Pool } = require('pg');
 const bcrypt = require('bcryptjs');
 const QRCode = require('qrcode');
 
-const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+const isNeon = /neon\.tech/.test(process.env.DATABASE_URL || '');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: isNeon ? { rejectUnauthorized: false } : false,
+});
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
 
 const CLUSTERS = ['Ahmedabad', 'Rajkot', 'Junagadh', 'Banaskantha'];
