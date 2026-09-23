@@ -70,7 +70,7 @@ export default function VirtualKeyboard() {
   useEffect(() => {
     function handleFocusIn(e) {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
-        if (e.target.type && ['password', 'email', 'checkbox', 'radio', 'date', 'number'].includes(e.target.type)) {
+        if (e.target.type && ['checkbox', 'radio', 'date', 'number'].includes(e.target.type)) {
           return;
         }
         targetRef.current = e.target;
